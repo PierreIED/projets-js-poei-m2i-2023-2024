@@ -1,0 +1,13 @@
+#Bouton1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px; /* Ajoute un espace autour des boutons à l'intérieur du conteneur */
+    justify-content: space-between; /* Cela permet de répartir l'espace uniformément entre les boutons */
+}
+
+#Bouton1 .btn {
+    box-sizing: border-box; /* Inclut la bordure et la marge dans la largeur/hauteur totale */
+    width: calc(25% - 20px); /* Ajustement pour la marge; modifiez selon vos besoins */
+    margin: 10px; /* Marge autour de chaque bouton */
+    /* Autres styles de bouton ici (hauteur, bordure, etc.) */
+}
