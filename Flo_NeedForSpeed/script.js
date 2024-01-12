@@ -1,7 +1,7 @@
 document.getElementById('voiture').style.gridColumnStart = '1'; 
 document.getElementById('voiture').style.gridColumnEnd = '2';
 document.getElementById('voiture').style.gridRowStart = '1';
-document.getElementById('voiture').style.gridRowEnd = '2';
+document.getElementById('voiture').style.gridRowEnd= '2';
 
 function move (dir){
     switch(dir){
