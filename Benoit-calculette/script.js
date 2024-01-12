@@ -3,7 +3,7 @@ var resultat = document.querySelector("#resultat")
 
 var valeurs = []
 var somme = 0
-var op;
+var op
 var val1 = 0
 var val2 = 0
 
@@ -22,13 +22,16 @@ function ajouterValeur(chiffre){
         valeurs = []
         resultat.value = somme
     }
+    console.log(val1, op, val2);
+    console.log(valeurs);
 }
 
-// function ajouterValeur2(){
-//     valeurs.push(btns.values)
-//     resultat.value = valeurs.join('')
-//     valeur1 = valeurs.join('')
-//     if(btns.value == "+" || btns.value == "-" || btns.value == "*" || btns.value == "/"){
-//         ajouterValeur2()
-//     }
-// }
+function ClearResultat(){
+    val1 = 0
+    val2 = 0
+    op = 0
+    resultat.value = ''
+    valeurs = []
+    console.log(val1, op, val2);
+    console.log(valeurs);
+}
