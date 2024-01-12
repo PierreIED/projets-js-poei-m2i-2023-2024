@@ -10,7 +10,7 @@ var val2 = 0
 function ajouterValeur(chiffre){
     valeurs.push(chiffre)
     resultat.value = valeurs.join('')
-    if(chiffre == '+'){
+    if(chiffre == '+' || chiffre == '-' || chiffre == '*' || chiffre == '/'){
         op = valeurs[valeurs.length-1]
         valeurs.pop()
         val1 = valeurs.join('')
@@ -22,11 +22,7 @@ function ajouterValeur(chiffre){
         valeurs = []
         resultat.value = somme
     }
-    console.log(valeurs);
-    console.log(val1);
-    console.log(op);
 }
-console.log(somme)
 
 // function ajouterValeur2(){
 //     valeurs.push(btns.values)
