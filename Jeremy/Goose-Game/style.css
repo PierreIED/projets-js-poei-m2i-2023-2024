@@ -1,0 +1,60 @@
+#container{
+	display: grid;
+	grid-template-columns: repeat(11, 1fr);
+	grid-template-rows: repeat(10,1fr);
+	border: 1px black solid;
+	width: 95vw;
+	height: 95vh;
+}
+#rouge{
+	grid-column: 1 / span 1;
+	grid-row: 1 / span 1;	
+}
+#vert{
+	grid-column: 1 / span 1;
+	grid-row: 2 / span 1;	
+}
+img{
+	width: 80px;
+	height: 80px;
+}
+#divButRouge{
+	grid-column: 1 / span 1;
+	grid-row: 10 / span 1;
+}
+#divButVert{
+	grid-column: 11 / span 1;
+	grid-row: 10 / span 1;
+}
+#divButStart{
+	grid-column: 6 / span 1;
+	grid-row: 10 / span 1;
+}
+#number {
+	grid-column: 1 / span 1;
+	grid-row: 5 / span 2;	
+}
+#number > div {
+	display:none;
+}
+.selected { display: block !important;}
+
+#board-game-container{
+	grid-column: 2 / span 8;
+    grid-row: 5 / span 1;
+}
+
+table 	{ 
+	text-align: center;
+	border: 0px;
+	margin-left: auto;
+    margin-right: auto;
+}
+td.case { 
+	background-color: lightgray; 
+	border:2px solid #fff; 
+	width:150px; height:50px; 
+}
+td.green-case { background-color: lightgreen; }
+td.red-case { background-color: tomato; }
+td.black-case { background-color: black; color:#fff;}
