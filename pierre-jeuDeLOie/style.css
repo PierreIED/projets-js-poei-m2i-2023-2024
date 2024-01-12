@@ -37,3 +37,17 @@ img{
 #number > div {
 	display:none;
 }
+
+.greenCase{
+	border-color : green;
+	border: 2px;
+}
+
+.redCase{
+	border-color : red;
+	border: 2px;
+}
+.blackase{
+
+	border: 2px;
+}
