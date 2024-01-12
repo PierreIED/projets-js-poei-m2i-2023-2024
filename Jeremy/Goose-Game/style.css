@@ -37,3 +37,23 @@ img{
 #number > div {
 	display:none;
 }
+.selected { display: block !important;}
+
+#board-game-container{
+	grid-column: 2 / span 8;
+    grid-row: 5 / span 1;
+}
+table 	{ 
+	text-align: center;
+	border: 0px;
+	margin-left: auto;
+    margin-right: auto;
+}
+td.case { 
+	background-color: lightgray; 
+	border:2px solid #fff; 
+	width:150px; height:50px; 
+}
+td.green-case { background-color: lightgreen; }
+td.red-case { background-color: tomato; }
+td.black-case { background-color: black; color:#fff;}

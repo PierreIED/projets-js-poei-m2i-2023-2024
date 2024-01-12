@@ -3,26 +3,135 @@
 <head>
 	<title>Jeu de l'oie</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link rel="stylesheet"  href="style.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<div id=container>
 		<div id=rouge><img src=rouge.png ></div>
 		<div id=vert><img src=vert.png ></div>
-		<div  id =divButRouge><input id =butRouge class="btn btn-danger" type="button"  value="Rouge" disabled></div>
-		<div  id =divButVert ><input id =butVert class="btn btn-success" type="button" value="Vert" disabled></div>
-		<div  id =divButStart><input id =butStart class="btn btn-primary" type="button" value="Start" ></div>
+		<div  id=divButRouge><input id=butRouge class="btn btn-danger" type="button"  value="Rouge" disabled></div>
+		<div  id=divButVert ><input id=butVert class="btn btn-success" type="button" value="Vert" disabled></div>
+		<div  id=divButStart><input id=butStart class="btn btn-primary" type="button" value="Start" ></div>
+
 		<div id=number>
-			<div id=1><img src=1.gif /></div>
-			<div id=2><img src=2.gif /></div>
-			<div id=3><img src=3.gif /></div>
-			<div id=4><img src=4.gif /></div>
-			<div id=5><img src=5.gif /></div>
-			<div id=6><img src=6.gif /></div>		
+			<div id="1"><img src=1.gif /></div>
+			<div id="2"><img src=2.gif /></div>
+			<div id="3"><img src=3.gif /></div>
+			<div id="4"><img src=4.gif /></div>
+			<div id="5"><img src=5.gif /></div>
+			<div id="6"><img src=6.gif /></div>		
 		</div>
+
+		<div id="board-game-container">
+			<table id="board-game" >
+				<!-- ROW 1 -->
+				<tr>
+					<td class="case">1</td>
+					<td class="case">2</td>
+					<td class="case">3</td>
+					<td class="case">4</td>
+					<td class="case green-case">5</td>
+					<td class="case red-case">6</td>
+					<td class="case">7</td>
+					<td class="case">8</td>
+					<td class="case">9</td>
+					<td class="case black-case">10</td>
+				</tr>
+	
+				<!-- ROW 2-->
+				<tr>
+					<td colspan="9"></td>
+					<td class="case">11</td>
+				</tr>
+	
+				<!-- ROW 3 -->
+				<tr>
+					<td class="case black-case">33</td>
+					<td class="case">34</td>
+					<td class="case">35</td>
+					<td class="case">36</td>
+					<td class="case green-case">37</td>
+					<td class="case red-case">38</td>
+					<td class="case">39</td>
+					<td class="case black-case">40</td>
+					<td></td>
+					<td class="case">12</td>
+				</tr>
+	
+				<!-- ROW 4 -->
+				<tr>
+					<td class="case">32</td>
+					<td colspan="6"></td>
+					<td class="case ">41</td>
+					<td></td>
+					<td class="case">13</td>
+				</tr>
+	
+				<!-- ROW 5 -->
+				<tr>
+					<td class="case">31</td>
+					<td></td>
+					<td class="case black-case">51</td>
+					<td class="case">52</td>
+					<td class="case">53</td>
+					<td class="case">54</td>
+					<td></td>
+					<td class="case">42</td>
+					<td></td>
+					<td class="case">14</td>
+				</tr>
+	
+				<!-- ROW 6 -->
+				<tr>
+					<td class="case">30</td>
+					<td></td>
+					<td class="case">50</td>
+					<td colspan="4"></td>
+					<td class="case">43</td>
+					<td></td>
+					<td class="case">15</td>
+				</tr>
+	
+				<!-- ROW 7 -->
+				<tr>
+					<td class="case">29</td>
+					<td></td>
+					<td class="case black-case">49</td>
+					<td class="case">48</td>
+					<td class="case">47</td>
+					<td class="case">46</td>
+					<td class="case">45</td>
+					<td class="case black-case">44</td>
+					<td></td>
+					<td class="case">16</td>
+				</tr>
+	
+				<!-- ROW 8 -->
+				<tr>
+					<td class="case">28</td>
+					<td colspan="8"></td>
+					<td class="case">17</td>
+				</tr>
+	
+				<!-- ROW 9 -->
+				<tr>
+					<td class="case black-case">27</td>
+					<td class="case">26</td>
+					<td class="case">25</td>
+					<td class="case">24</td>
+					<td class="case green-case">23</td>
+					<td class="case red-case">22</td>
+					<td class="case">21</td>
+					<td class="case">20</td>
+					<td class="case">19</td>
+					<td class="case black-case">18</td>
+				</tr>
+			</table>
 	</div>
 
-    <script src = script.js>
-    </script>
+	
+	</div>
+
+    <script src = script.js></script>
 </body>
 </html>
