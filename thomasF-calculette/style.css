@@ -1,0 +1,25 @@
+#haut-affichage {
+    font-size: 15px;
+}
+#bas-affichage {
+    font-size: 30px;
+}
+
+button {
+    height: 62px;
+    width: 62px;
+}
+
+#equal {
+    height: 62px;
+    width: 136px;
+}
+
+body {
+    background-color: black;
+}
+
+.affichage {
+    height: 80px;
+}
+
