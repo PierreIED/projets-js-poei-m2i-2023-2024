@@ -5,11 +5,9 @@ const available = (coord) => ([1, 5, 9].find(elt => elt == coord) != undefined)
 function testMoveCar(axe, op) {
     if (!available(coordCar[(axe + 1) % 2]))
         return
-    coordCar[axe] += eval(op + "1")
-    if (coordCar[axe] < 1 || coordCar[axe] > 9) {
-        coordCar[axe] -= eval(op + "1")
-    }
-    else {
+    let nextCoord = coordCar[axe] + eval(op + "1")
+    if (nextCoord > 0 && nextCoord < 10) {
+        coordCar[axe] = nextCoord
         moveCar()
     }
 }
