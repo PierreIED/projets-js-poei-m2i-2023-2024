@@ -27,11 +27,10 @@ function enableBtn(isEnabled){
 function resetPlayerPos(player){
     let parent = player.parentNode
     const playerPos = parent.getAttribute('id')
-    console.log(parent, playerPos)
-    if(playerPos != 'container')  {
-        console.log(container)
+
+    if(playerPos != 'container')  
         container.insertBefore(player, document.querySelector('#divButRouge'))
-    }
+    
 }
 
 function resetDice(){
