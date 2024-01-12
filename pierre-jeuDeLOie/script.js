@@ -28,29 +28,22 @@ function buildGrid() {
     for (let i = 0; i < coordGrid.length; i++) {
 
         let newDiv = document.createElement('div')
-        if (i in [4, 21]) {
-            newDiv.classList.add('greenCase')
-            console.log(newDiv)
-        }
-        else if (i in [5, 22]) {
-            newDiv.classList.add('redCase')
-        }
-        else if (i in [10, 26, 35]) {
-            newDiv.classList.add('blackCaseS')
-        }
         newDiv.id = "case" + i
         document.querySelector('#container').appendChild(newDiv)
         newDiv.style.border = "solid"
         newDiv.style.zIndex = -1
         displayElement(coordGrid, newDiv, i)
     }
+    document.getElementById('case4').style.borderColor = 'green'
+    document.getElementById('case21').style.borderColor = 'green'
+    document.getElementById('case5').style.borderColor = 'red'
+    document.getElementById('case22').style.borderColor = 'red'
     return coordGrid
 }
 
 var coordGrid = buildGrid()
 var REDPOS = 0
 var GREENPOS = 0
-console.log(coordGrid)
 var turn = true
 
 var startBtn = document.querySelector('#butStart')
@@ -65,6 +58,7 @@ function initialize() {
     startBtn.addEventListener('click', start)
     redBtn.addEventListener('click', moveRed)
     greenBtn.addEventListener('click', moveGreen)
+    
 }
 
 function start() {
@@ -76,6 +70,7 @@ function moveRed() {
     redBtn.disabled = true
     greenBtn.disabled = false
     REDPOS += rollDice()
+    REDPOS += testColorCase('red', REDPOS)
     resolveDice(red)
     turn = !turn
 }
@@ -84,6 +79,7 @@ function moveGreen() {
     greenBtn.disabled = true
     redBtn.disabled = false
     GREENPOS += rollDice()
+    GREENPOS += testColorCase('green', GREENPOS)
     resolveDice(green)
     turn = !turn
 }
@@ -113,4 +109,15 @@ function displayElement(coordGrid, elt, pos) {
     elt.style.gridColumnEnd = coordGrid[pos][0] + 1
     elt.style.gridRowStart = coordGrid[pos][1]
     elt.style.gridRowEnd = coordGrid[pos][1] + 1
+}
+
+function testColorCase(color, pos){
+    currentCase = document.getElementById('case'+(pos -1))
+    console.log(currentCase)
+    console.log(currentCase.style.borderColor)
+    if (currentCase.style.borderColor == 'initial') return 0
+
+    if (currentCase.style.borderColor == color) return 2
+
+    return -2
 }
