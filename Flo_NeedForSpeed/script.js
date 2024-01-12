@@ -1,35 +1,36 @@
-document.getElementById('voiture').style.gridColumnStart = '1'; 
-document.getElementById('voiture').style.gridColumnEnd = '2';
-document.getElementById('voiture').style.gridRowStart = '1';
-document.getElementById('voiture').style.gridRowEnd= '2';
+var pos = document.getElementById('voiture').style;
+pos.gridColumnStart = '1';
+pos.gridColumnEnd = '2';
+pos.gridRowStart = '1';
+pos.gridRowEnd = '2';
 
 function move (dir){
     switch(dir){
         case 'left' : 
         if (isValid(dir)) {
-            document.getElementById('voiture').style.gridColumnStart = `${Number(document.getElementById('voiture').style.gridColumnStart) - 1}`; 
-            document.getElementById('voiture').style.gridColumnEnd = `${Number(document.getElementById('voiture').style.gridColumnEnd) - 1}`;
+            pos.gridColumnStart = `${Number(pos.gridColumnStart) - 1}`; 
+            pos.gridColumnEnd = `${Number(pos.gridColumnEnd) - 1}`;
         }
         break;
 
         case 'top' : 
         if (isValid(dir)) {
-            document.getElementById('voiture').style.gridRowStart = `${Number(document.getElementById('voiture').style.gridRowStart) - 1}`; 
-            document.getElementById('voiture').style.gridRowEnd = `${Number(document.getElementById('voiture').style.gridRowEnd) - 1}`; 
+            pos.gridRowStart = `${Number(pos.gridRowStart) - 1}`; 
+            pos.gridRowEnd = `${Number(pos.gridRowEnd) - 1}`; 
         }
         break;
 
         case 'bot' :
             if (isValid(dir)){
-                document.getElementById('voiture').style.gridRowStart = `${Number(document.getElementById('voiture').style.gridRowStart) + 1}`; 
-                document.getElementById('voiture').style.gridRowEnd = `${Number(document.getElementById('voiture').style.gridRowEnd) + 1}`; 
+                pos.gridRowStart = `${Number(pos.gridRowStart) + 1}`; 
+                pos.gridRowEnd = `${Number(pos.gridRowEnd) + 1}`; 
             }
             break;
 
         case 'right' :
             if (isValid(dir)){
-                document.getElementById('voiture').style.gridColumnStart = `${Number(document.getElementById('voiture').style.gridColumnStart) + 1}`; 
-                document.getElementById('voiture').style.gridColumnEnd = `${Number(document.getElementById('voiture').style.gridColumnEnd) + 1}`; 
+                pos.gridColumnStart = `${Number(pos.gridColumnStart) + 1}`; 
+                pos.gridColumnEnd = `${Number(pos.gridColumnEnd) + 1}`; 
             }
         break;
     }   
@@ -38,35 +39,35 @@ function move (dir){
 function isValid(dir){
     switch(dir){
         case 'right' : 
-        if ((document.getElementById('voiture').style.gridColumnStart < '9') 
-        && ((document.getElementById('voiture').style.gridRowStart == '1') 
-        || (document.getElementById('voiture').style.gridRowStart == '5')
-        || (document.getElementById('voiture').style.gridRowStart == '9'))) {
+        if ((pos.gridColumnStart < '9') 
+        && ((pos.gridRowStart == '1') 
+        || (pos.gridRowStart == '5')
+        || (pos.gridRowStart == '9'))) {
             return true;
         }
         return false;
 
         case 'left': 
-        if ((document.getElementById('voiture').style.gridRowStart == '1') 
-        || (document.getElementById('voiture').style.gridRowStart == '5')
-        || (document.getElementById('voiture').style.gridRowStart == '9')) {
+        if ((pos.gridRowStart == '1') 
+        || (pos.gridRowStart == '5')
+        || (pos.gridRowStart == '9')) {
             return true;
         }
         return false;
 
         case 'bot' :
-        if ((document.getElementById('voiture').style.gridRowStart < '9') 
-        && ((document.getElementById('voiture').style.gridColumnStart == '1') 
-        || (document.getElementById('voiture').style.gridColumnStart == '5')
-        || (document.getElementById('voiture').style.gridColumnStart == '9'))) {
+        if ((pos.gridRowStart < '9') 
+        && ((pos.gridColumnStart == '1') 
+        || (pos.gridColumnStart == '5')
+        || (pos.gridColumnStart == '9'))) {
             return true;
         }
         return false;
 
         case 'top' :
-            if ((document.getElementById('voiture').style.gridColumnStart == '1') 
-            || (document.getElementById('voiture').style.gridColumnStart == '5')
-            || (document.getElementById('voiture').style.gridColumnStart == '9')) {
+            if ((pos.gridColumnStart == '1') 
+            || (pos.gridColumnStart == '5')
+            || (pos.gridColumnStart == '9')) {
                 return true;
             }
             return false;
