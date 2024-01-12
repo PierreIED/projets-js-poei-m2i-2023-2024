@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conjugueur</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a6c393237d.js"></script>
+    <script src="conjugaison.js" defer></script>
+</head>
+
+<body class="bg-light">
+    <h1 class="text-center my-5 text-primary fw-bold text-uppercase">Le Conjugueur</h1>
+
+    <div class="container text-center">
+        <div class="row my-5">
+            <label class="form-label" for="verbe">Entrer le verbe du premier groupe à conjuguer </label>
+            <div class="offset-2 col-8">
+                <input class="form-control" type="text" id="verbe">
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-outline-primary" onclick="present()">PRESENT</button>
+                <button class="btn btn-outline-success" onclick="futur()">FUTUR</button>
+                <button class="btn btn-outline-danger" onclick="imparfait()">IMPARFAIT</button>
+            </div>
+        </div>
+        <div class="row bg-white">
+            <div id="affichage">
+                <h2 class="my-5 text-primary fw-bold" id="temps"></h2>
+                <p class="pronoms"></p>
+                <p class="pronoms"></p>
+                <p class="pronoms"></p>
+                <p class="pronoms"></p>
+                <p class="pronoms"></p>
+                <p class="pronoms"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
